@@ -48,7 +48,19 @@ Screen | 15.6' 1920x1080 OLED
 - Go to "Additional drivers" in ubuntu and install nvidia's 530 (proprietary), restart (make sure it's using X instead of wayland, see settings/about)
 - Download the repo and run setup.sh to:
   - create a service which runs a few lines to make the ALC294 work on Ubuntu
+    - the service runs these lines after 10seconds of booting:
+      ```
+      #!/bin/bash
+      sudo hda-verb /dev/snd/hwC0D0 0x20 0x500 0xf
+      sudo hda-verb /dev/snd/hwC0D0 0x20 0x400 0x7774
+      ```
   - edit the alsa conf to make headset microphone work (and provide a little better bass sound.. maybe)
+    - in /etc/modprobe.d/alsa-base.conf
+      ```
+      #try for no headset mic:
+      options snd-hda-intel position fix=1
+      options snd-hda-intel model=aspire-headset-mic
+      ```
 
 -----------
 
