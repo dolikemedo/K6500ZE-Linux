@@ -6,7 +6,7 @@ Audio fix and tipps for Asus K6500ZE
   - Use rufus and allow it disable TPM and secure boot stuff when writing the bootable pendrive when it asks for it (usually when you click start). 
   - One C partition is enough if you are using ubuntu mainly
 - Create free space by srinking C
-- follow boot - root - home - swap - efi scheme (in the tutorial above its home - root, but whatever, you can choose "install beside win11", and don't even have create a separate home if don't want to install additional linux OSs, I just follow this for historical reasons. If you don't want to think about it follow this or "install along side win11")
+- follow boot - root - home - swap - efi scheme (in the tutorial above its home - root, but whatever, you can choose "install beside win11", and you don't even have create a separate home if don't want to install additional linux OSs, I just follow this for historical reasons. If you don't want to think about it follow this or "install along side win11")
 - TURN OFF FAST BOOT in WIN11 !!! [Here's how.](https://www.windowscentral.com/software-apps/windows-11/how-to-enable-or-disable-fast-startup-on-windows-11)
   - win11 doesn't properly shuts down the kernel so it can boot faster. In dualboot this can cause problems.
 - It can cause problems to use secure boot for many things. I usually don't even turn it on.
