@@ -29,8 +29,9 @@ dualboot:
 
 -----------
 
-### Oled:
+### [Oled](https://www.asus.com/support/FAQ/1044809):
 - The usual OLED warnings apply.
+  - use dark mode in both win11 and ubuntu
   - Do not display static image for long period of time on the built-in display.
   - Close the lid and use external monitors (would be a shame not to use the nice oled display though :-) )
   - Use auto-hide for taskbar
