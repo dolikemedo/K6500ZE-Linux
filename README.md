@@ -25,7 +25,7 @@ Audio fix and tipps for Asus K6500ZE
 
 -----------
 
-### Ubuntu
+### Ubuntu settings
 
 #### No sound issue:
 (Tested: Ubuntu22.04, Kernel 5.19.17)
