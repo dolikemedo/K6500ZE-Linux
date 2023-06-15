@@ -42,6 +42,6 @@ Audio fix and tipps for Asus K6500ZE
   - Close the lid and use external monitors (would be a shame not to use the nice oled display though :-) )
   - Use auto-hide for taskbar
   - Choose a folder with different background and set 5-10mins for change
-  - AVOID SUN LIGHT!!! Minimize the exposure to sunlight. (even with OLED smartphones/tablets yes)
+  - **AVOID SUN LIGHT!!!** Minimize the exposure to sunlight. (even with OLED smartphones/tablets yes)
   - There are smart function in both linux and win11, and manufacturer provided apps (myAsus)
   - etc.
