@@ -29,7 +29,7 @@ Audio fix and tipps for Asus K6500ZE
 
 #### No sound issue:
 (Tested: Ubuntu22.04, Kernel 5.19.17)    
-(I describe the main steps if my setup, because it's kind of a magic solution)    
+(I describe the main steps of my setup, because it's kind of a magic solution)    
 - Install mainline GUI app. [Here's how](https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/)
 - Install Kernel 5.19.17, restart
 - Go to "Additional drivers" in ubuntu and install nvidia's 530 (proprietary), restart (make sure it's using X instead of wayland, see settings/about)
