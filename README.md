@@ -62,6 +62,10 @@ Screen | 15.6' 1920x1080 OLED
       options snd-hda-intel model=aspire-headset-mic
       ```
 
+  - throttling issue?
+    - https://github.com/erpalma/throttled
+    - https://github.com/atimonder1/asusk6500ze-linux
+
 -----------
 
 ### [Oled](https://www.asus.com/support/FAQ/1044809):
