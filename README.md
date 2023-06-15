@@ -1,6 +1,19 @@
 # K6500ZE Win11 Ubuntu dualboot
 Audio fix and tipps for Asus K6500ZE
 
+# Specs
+Hardware | Device
+-------- | ------
+CPU | Intel i7-12700H
+GPU | Nvidia RTX 3050 Ti Mobile 65W
+RAM | 16 GB LPDDR5
+SSD | NVME TEAM TM8FPD001T 1 TB
+Screen | 15.6' 1920x1080 OLED
+
+### [Geekbench](https://browser.geekbench.com/v6/cpu/1541041)
+
+-----------
+
 ### [Dualboot:](https://www.linuxtechi.com/dual-boot-ubuntu-22-04-and-windows-11/) 
 - win11 first.
   - Use rufus and allow it disable TPM and secure boot stuff when writing the bootable pendrive when it asks for it (usually when you click start). 
