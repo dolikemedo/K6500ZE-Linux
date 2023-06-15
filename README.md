@@ -3,7 +3,7 @@ Audio fix and tipps for Asus K6500ZE
 
 ### [Dualboot:](https://www.linuxtechi.com/dual-boot-ubuntu-22-04-and-windows-11/) 
 - win11 first.
-  - Use rufus and allow it disable TPM and secure boot stuff when writing the bootable pendrive. 
+  - Use rufus and allow it disable TPM and secure boot stuff when writing the bootable pendrive when it asks for it (usually when you click start). 
   - One C partition is enough if you are using ubuntu mainly
 - Create free space by srinking C
 - follow boot - root - home - swap - efi scheme (in the tutorial above its home - root, but whatever)
