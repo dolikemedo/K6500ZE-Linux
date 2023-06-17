@@ -1,0 +1,11 @@
+[Unit]
+Description=Sound fix one-shot service
+After=multi-user.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/bin/bash /usr/local/bin/sound-fix.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -10,7 +10,8 @@ RAM | 16 GB LPDDR5
 SSD | NVME TEAM TM8FPD001T 1 TB
 Screen | 15.6' 1920x1080 OLED
 
-### [Geekbench](https://browser.geekbench.com/v6/cpu/1541041)
+#### [Geekbench with default CPU throttle behaviour](https://browser.geekbench.com/v6/cpu/1541041)
+#### [Geekbench with "throttled" program's solution](https://browser.geekbench.com/v6/cpu/1611323)
 
 -----------
 
@@ -62,16 +63,42 @@ Screen | 15.6' 1920x1080 OLED
       options snd-hda-intel model=aspire-headset-mic
       ```
 
-  - throttling issue?
-    - https://github.com/erpalma/throttled
-    - https://github.com/atimonder1/asusk6500ze-linux
+  - throttling issue:
+    - The CPU is throttled and will only usee 29-30W of power by default. 
+    - Use throttled to solve the issue:
+      1. install stress and s-tui [https://github.com/amanusk/s-tui](https://github.com/amanusk/s-tui)
+      2. See if you are throttled (only 2400MHz freq and 30W power)
+      3. install throttled [https://github.com/erpalma/throttled](https://github.com/erpalma/throttled)
+      4. set /etc/throttled.conf as the sample provided. Conf might change, so set the values by hand.
+         - Under AC section:
+         - PL1_Tdp_W: 115
+         - PL2_Tdp_W: 115
+         - Trip_Temp_C: 85
+        ### My recommendation:
+        - Only set Tdp to 115 under AC section. 
+        - It's likely when you are using battery, you won't run computation heavy tasks and would still be good with the default throttling  with 30W of power, thus prolonging battery life. (still 11350 geekbench score)
+        - WARNING: Do not set higher values! Do not set ANY OTHER values if you don't know what you are doing. (exmpl. undervolting)
+        - This is not overclocking! This just allows the CPU to use its intended power maximum usually during peaks at normal usage.
+        - DO NOT set the trip temp above 85. This will again thermal throttle the CPU but its safer and still better. IF you have a laptop stand with fans and normal roomtemp environment you can set it to 95˚C but dont stress it for long periods of time. 
+        - At 85˚C the machine still got 12536 geekbench score, which is pretty good for a laptop. 
+    
 
 
-##### Battery:
+#### Battery:
 
-```
-echo (amount) > /sys/class/power_supply/BAT0/charge_control_end_threshold
-```
+  - after setup.sh you can use **max-battery** command with battery percentage as argument.
+    ```
+      #alway on AC usage:
+      max-battery 60
+      #more capacity needed:
+      max-battery 100
+    ``` 
+  - Manually:     
+    ```
+      echo 60 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
+    ```
+
+  ### **After setting max-battery higher than previously, please reconnect the charger**
 
 -----------
 
@@ -85,3 +112,12 @@ echo (amount) > /sys/class/power_supply/BAT0/charge_control_end_threshold
   - **AVOID SUN LIGHT!!!** Minimize the exposure to sunlight. (even with OLED smartphones/tablets yes)
   - There are smart function in both linux and win11, and manufacturer provided apps (myAsus)
   - etc.
+
+
+-----------
+[My answer at askUbuntu](https://askubuntu.com/questions/1451235/almost-no-sound-alc294-in-vivobook-pro-15-ubuntu-22-04/1471708#1471708)
+### Credits:
+Inspiration from:     
+- [https://github.com/atimonder1/asusk6500ze-linux](https://github.com/atimonder1/asusk6500ze-linux)     
+- [https://github.com/goldarte/alc294_soundfix](https://github.com/goldarte/alc294_soundfix)
+- [https://bugzilla.kernel.org/show_bug.cgi?id=206289](https://bugzilla.kernel.org/show_bug.cgi?id=206289)
