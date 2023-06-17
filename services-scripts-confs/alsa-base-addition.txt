@@ -1,0 +1,4 @@
+
+#try for no headset mic:
+options snd-hda-intel position fix=1
+options snd-hda-intel model=aspire-headset-mic

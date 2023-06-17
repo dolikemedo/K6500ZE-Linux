@@ -48,20 +48,25 @@ apt-get update && apt-get install -y alsa-tools
 
 # Setting up sound-fix service
 echo -e "${YEL}\nSetting up sound-fix service...${NC}"
-cp  ./services-scripts-confs/sound-fix.sh /usr/local/bin/sound-fix.sh
-cp ./services-scripts-confs/sound-fix.service /lib/systemd/system/sound-fix.service
+cp  "$PWD"/services-scripts-confs/sound-fix.sh /usr/local/bin/sound-fix.sh
+cp "$PWD"/services-scripts-confs/sound-fix.service /lib/systemd/system/sound-fix.service
 systemctl enable sound-fix
 
 
 # Setting up sound-fix service
 echo -e "${YEL}\nSetting up max-battery service...${NC}"
-cp ./services-scripts-confs/max-battery.service /lib/systemd/system/max-battery.service
+cp "$PWD"/services-scripts-confs/max-battery.service /lib/systemd/system/max-battery.service
 echo 60 | tee /etc/max-battery.value
 ln -s "$PWD"/services-scripts-confs/max-battery.sh /usr/local/bin/max-battery
 systemctl enable max-battery
 systemctl start max-battery
 
 
+# Setting up headset mic to work
+echo -e "${YEL}\nSetting up headset mic to work in alsa-base.conf...${NC}"
+cat "$PWD"/services-scripts-confs/alsa-base-addition.txt | tee -a /etc/modprobe.d/alsa-base.conf
+
+
 show_help
-echo -e "\nPlease reboot for all services to take effect and to check if it's working\n"
+echo -e "\nPlease reboot for all things to take effect and to check if it's working\n"
 exit 0
