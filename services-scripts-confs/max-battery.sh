@@ -8,7 +8,7 @@ show_help () {
     echo "Usage:"
     echo -e "run ${YEL}max-battery 60${NC} if you are using the laptop from AC a lot.\nrun ${YEL}max-battery 100${NC} if you need more capacity"
     echo "Please provide a number between 60 and 100"s
-    echo "After setting max-battery higher than previously, please reconnect the charger"
+    echo "After setting max-battery please reconnect the charger"
 }
 
 # Check for previliges!

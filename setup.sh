@@ -10,7 +10,7 @@ show_help () {
     echo "sound should be fixed shortly after next boot"
     echo "max-battery usage after setup.sh finished: "
     echo -e "run ${YEL}max-battery 60${NC} if you are using the laptop from AC a lot.\nrun ${YEL}max-battery 100${NC} if you need more capacity"
-    echo "After setting max-battery higher than previously, please reconnect the charger"
+    echo "After setting max-battery please reconnect the charger"
 }
 
 show_help_kernel () {

@@ -98,7 +98,7 @@ Screen | 15.6' 1920x1080 OLED
       echo 60 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
     ```
 
-  ### **After setting max-battery higher than previously, please reconnect the charger**
+  ### **After setting max-battery please reconnect the charger**
 
 -----------
 
