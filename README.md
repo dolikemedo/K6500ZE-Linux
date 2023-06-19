@@ -79,7 +79,7 @@ Screen | 15.6' 1920x1080 OLED
         - It's likely when you are using battery, you won't run computation heavy tasks and would still be good with the default throttling  with 30W of power, thus prolonging battery life. (still 11350 geekbench score)
         - WARNING: Do not set higher values! Do not set ANY OTHER values if you don't know what you are doing. (exmpl. undervolting)
         - This is not overclocking! This just allows the CPU to use its intended power maximum usually during peaks at normal usage.
-        - DO NOT set the trip temp above 85. This will again thermal throttle the CPU but its safer and still better. IF you have a laptop stand with fans and normal roomtemp environment you can set it to 95˚C but dont stress it for long periods of time. 
+        - Set the trip temp at 85. This will again thermal throttle the CPU but its safer and still better. IF you have a laptop stand with fans and normal roomtemp environment you can set it to 95˚C but dont stress it for long periods of time. 
         - At 85˚C the machine still got 12536 geekbench score, which is pretty good for a laptop. 
     
 
