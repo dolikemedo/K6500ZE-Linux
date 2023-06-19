@@ -36,7 +36,7 @@ Screen | 15.6' 1920x1080 OLED
 - Download myAsus app, go to customization and set "Battery Health Charging" according to your use.
   - Alway on desk pluged in? Max lifespan mode
   - Go on the road for a few days? Full capacity mode.
-
+  - Disconnect the charging cable when you turn off and leave the laptop. (obviously, if you need capacity, leave it in.)
 -----------
 
 ### Ubuntu settings
@@ -99,6 +99,9 @@ Screen | 15.6' 1920x1080 OLED
     ```
 
   ### **After setting max-battery please reconnect the charger**
+  - Please also disconnect the charger when you turn off and leave the laptop.
+  - The OS (win or linux) might be able to handle charging but what happens when you turn off? 
+  - Storing is best at 50-60% accord to manufacturer.
 
 -----------
 
