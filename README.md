@@ -11,7 +11,7 @@ SSD | NVME TEAM TM8FPD001T 1 TB
 Screen | 15.6' 1920x1080 OLED
 
 #### [Geekbench with default CPU throttle behaviour](https://browser.geekbench.com/v6/cpu/1541041)
-#### [Geekbench with "throttled" program's solution](https://browser.geekbench.com/v6/cpu/1611323)
+#### [Geekbench with "throttled" program's solution](https://browser.geekbench.com/v6/cpu/1648561)
 
 -----------
 
@@ -73,13 +73,14 @@ Screen | 15.6' 1920x1080 OLED
          - Under AC section:
          - PL1_Tdp_W: 115
          - PL2_Tdp_W: 115
-         - Trip_Temp_C: 85
+         - Trip_Temp_C: 95
         ### My recommendation:
         - Only set Tdp to 115 under AC section. 
         - It's likely when you are using battery, you won't run computation heavy tasks and would still be good with the default throttling  with 30W of power, thus prolonging battery life. (still 11350 geekbench score)
         - WARNING: Do not set higher values! Do not set ANY OTHER values if you don't know what you are doing. (exmpl. undervolting)
         - This is not overclocking! This just allows the CPU to use its intended power maximum usually during peaks at normal usage.
-        - Set the trip temp at 85. This will again thermal throttle the CPU but its safer and still better. IF you have a laptop stand with fans and normal roomtemp environment you can set it to 95˚C but dont stress it for long periods of time. 
+        - If you are constantly stressing the machine with your work set the trip temp at 85. This will again thermal throttle the CPU but its safer and still better. Maybe you can stress it for longer at 95 if you have a laptop stand with fans and normal roomtemp environment.
+        - If your normal work doesn't require long periods of stress (rare I guess) 95 trip temp is OK. 
         - At 85˚C the machine still got 12536 geekbench score, which is pretty good for a laptop. 
     
 
