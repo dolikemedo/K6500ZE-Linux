@@ -37,6 +37,7 @@ Screen | 15.6' 1920x1080 OLED
   - Alway on desk pluged in? Max lifespan mode
   - Go on the road for a few days? Full capacity mode.
   - Disconnect the charging cable when you turn off and leave the laptop. (obviously, if you need capacity, leave it in.)
+  - extend battery time with using integrated graphics.
 -----------
 
 ### Ubuntu settings
@@ -103,6 +104,10 @@ Screen | 15.6' 1920x1080 OLED
   - Please also disconnect the charger when you turn off and leave the laptop.
   - The OS (win or linux) might be able to handle charging but what happens when you turn off? 
   - Storing is best at 50-60% accord to manufacturer.
+  
+  ### **for extended battery time, use integrated graphics (power saving mode in NVIDIA X Server PRIME Profiles)**
+  - this means graphics heavy tasks might be laggy or slower, but you can have long battery time.
+  - Also try using power saver mode in ubuntu
 
 -----------
 
