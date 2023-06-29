@@ -42,7 +42,13 @@ Screen | 15.6' 1920x1080 OLED
 
 ### Ubuntu settings
 
-#### No sound issue:
+#### bad clock sync:
+  ```
+    sudo timedatectl set-local-rtc 1
+  ```
+source: [https://itsfoss.com/wrong-time-dual-boot/](https://itsfoss.com/wrong-time-dual-boot/)
+
+### No sound issue:
 (Tested: Ubuntu22.04, Kernel 5.19.17)    
 (I describe the main steps of my setup, because it's kind of a magic solution)    
 - Install mainline GUI app. [Here's how](https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/)
