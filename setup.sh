@@ -41,7 +41,7 @@ else
 fi
 
 
-Install the neccessery part in the system
+# Install the neccessery part in the system
 echo -e "${YEL}\nInstalling sys requirements...\n${NC}"
 apt-get update && apt-get install -y alsa-tools
 
