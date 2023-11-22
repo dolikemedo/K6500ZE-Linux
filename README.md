@@ -49,10 +49,10 @@ Screen | 15.6' 1920x1080 OLED
 source: [https://itsfoss.com/wrong-time-dual-boot/](https://itsfoss.com/wrong-time-dual-boot/)
 
 ### No sound issue:
-(Tested: Ubuntu22.04, Kernel 5.19.17)    
+(Tested: Ubuntu22.04, Kernel 5.19.17, 6.2.0)    
 (I describe the main steps of my setup, because it's kind of a magic solution)    
 - Install mainline GUI app. [Here's how](https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/)
-- Install Kernel 5.19.17, restart
+- Install Kernel 5.19.17, restart (optional, might work for 5.15)
 - Go to "Additional drivers" in ubuntu and install nvidia's 530 (proprietary), restart (make sure it's using X instead of wayland, see settings/about)
 - Download the repo and run setup.sh to:
   - create a service which runs a few lines to make the ALC294 work on Ubuntu
@@ -128,6 +128,17 @@ source: [https://itsfoss.com/wrong-time-dual-boot/](https://itsfoss.com/wrong-ti
   - There are smart function in both linux and win11, and manufacturer provided apps (myAsus)
   - etc.
 
+
+-----------
+### Cudy WU1300S Wifi adapter and other RTL88x2BU devices
+1. Install GCC v12 and G++ v12
+  ```
+    sudo apt install gcc-12 g++-12
+  ```
+2. use update alternatives, run for your previous versions aswell:     
+  [https://linuxconfig.org/how-to-switch-between-multiple-gcc-and-g-compiler-versions-on-ubuntu-20-04-lts-focal-fossa](https://linuxconfig.org/how-to-switch-between-multiple-gcc-and-g-compiler-versions-on-ubuntu-20-04-lts-focal-fossa)
+3. install driver from here:     
+  [https://github.com/RinCat/RTL88x2BU-Linux-Driver](https://github.com/RinCat/RTL88x2BU-Linux-Driver)
 
 -----------
 [My answer at askUbuntu](https://askubuntu.com/questions/1451235/almost-no-sound-alc294-in-vivobook-pro-15-ubuntu-22-04/1471708#1471708)

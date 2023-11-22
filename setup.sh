@@ -14,9 +14,9 @@ show_help () {
 }
 
 show_help_kernel () {
-    echo -e "Please update your kernel with mainline. Recommended: ${YEL}5.19.17${NC}"
+    echo -e "It's a good idea to update kernel for the 12th gen CPU. Try: ${YEL}6.2${NC}"
     echo "Follow this: https://ubuntuhandbook.org/index.php/2020/08/mainline-install-latest-kernel-ubuntu-linux-mint/"
-    echo "Come back and run setup.sh again"
+    echo "Fix works for 5.15, 5.19.17 and 6.2 as well"
 }
 
 # Check for previliges!
@@ -27,7 +27,6 @@ fi
 
 if uname -r | grep -q "5.15."; then
     show_help_kernel
-    exit 1
 fi
 
 echo -e "${YEL}\nChecking internet connection...${NC}"
