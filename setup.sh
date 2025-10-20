@@ -52,7 +52,7 @@ cp "$PWD"/services-scripts-confs/sound-fix.service /lib/systemd/system/sound-fix
 systemctl enable sound-fix
 
 
-# Setting up sound-fix service
+# Setting up max-battery service
 echo -e "${YEL}\nSetting up max-battery service...${NC}"
 cp "$PWD"/services-scripts-confs/max-battery.service /lib/systemd/system/max-battery.service
 echo 60 | tee /etc/max-battery.value
